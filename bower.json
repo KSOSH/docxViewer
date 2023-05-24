@@ -1,0 +1,21 @@
+{
+	"name": "docx_viewer",
+	"description": "Просмотр DOC, DOCX файлов",
+	"main": "Gruntfile.js",
+	"authors": [
+		"ProjectSoft <projectsoft2009@yandex.ru>"
+	],
+	"license": "MIT",
+	"homepage": "",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"docxjs": "https://github.com/VolodymyrBaydalka/docxjs.git#^0.1.15",
+		"bootstrap": "5.1.3"
+	}
+}
