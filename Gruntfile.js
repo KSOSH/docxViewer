@@ -170,6 +170,14 @@ module.exports = function(grunt) {
 				]
 			}
 		},
+		serve: {
+			options: {
+				port: 8000,
+				serve: {
+					path: __dirname + "\\dist\\",
+				}
+			}
+		}
 	});
 	grunt.registerTask('default', [
 		'concat',
@@ -179,6 +187,8 @@ module.exports = function(grunt) {
 		'group_css_media_queries',
 		'replace',
 		'cssmin',
-		'pug'
+		'pug',
+		'serve'
 	]);
+	//grunt.log.writeln([__dirname + "\\dist\\"]);
 }

@@ -4,7 +4,9 @@
 	"description": "Просмотр DOC, DOCX файлов",
 	"main": "Gruntfile.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"i": "npm i --legacy-peer-deps",
+		"r": "grunt -v"
 	},
 	"author": "ProjectSoft <projectsoft2009@yandex.ru>",
 	"license": "MIT",
@@ -18,6 +20,7 @@
 		"grunt-contrib-uglify-es": "^3.3.0",
 		"grunt-group-css-media-queries": "^1.0.1",
 		"grunt-replace": "^2.0.2",
+		"grunt-serve": "^0.1.6",
 		"less-plugin-npm-import": "^2.1.0",
 		"load-grunt-tasks": "^5.1.0",
 		"md5": "^2.3.0",
