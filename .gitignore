@@ -4,4 +4,4 @@ index.html
 *.doc
 *.docx
 *-lock.json
-!dist/index.html
+!dist/viewer/docx_viewer/index.html
