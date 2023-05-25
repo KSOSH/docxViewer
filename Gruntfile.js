@@ -33,11 +33,10 @@ module.exports = function(grunt) {
 			},
 			app: {
 				src: [
-					'bower_components/bootstrap/dist/js/bootstrap.bundle.js',
+					//'bower_components/bootstrap/dist/js/bootstrap.bundle.js',
 					'src/js/core-js-bundle.js',
 					'src/js/jszip.js',
 					'bower_components/docxjs/dist/docx-preview.js',
-					'bower_components/docxjs/demo/thumbnail.example.js',
 					'src/js/main.js'
 				],
 				dest: 'test/js/main.js'
@@ -81,6 +80,7 @@ module.exports = function(grunt) {
 				},
 				files : {
 					'test/css/main.css' : [
+						//'bower_components/bootstrap/dist/css/bootstrap.css',
 						'src/less/main.less'
 					]
 				}
