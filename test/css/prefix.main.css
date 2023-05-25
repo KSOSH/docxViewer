@@ -11,6 +11,9 @@ body {
   padding-top: 1em;
   background-color: #2a2a2e;
 }
+.docx table a {
+  word-break: break-all;
+}
 .title-bar {
   position: fixed;
   width: 100%;
