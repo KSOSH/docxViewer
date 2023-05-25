@@ -16146,7 +16146,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_jszip__;
 		container = document.querySelector("#document-container"),
 		loadFile = function(url) {
 			return new Promise((responce, reject) => {
-				fetch(url)
+				fetch(url, {cache: "no-cache"})
 					.then( res => res.blob() )
 					.then( blob => {
 						//var file = window.URL.createObjectURL(blob);

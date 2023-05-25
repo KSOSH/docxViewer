@@ -12,7 +12,7 @@
 			<div id="title">&nbsp;</div><a id="download"><span>Скачать</span></a>
 		</div>
 		<div class="overflow-auto flex-grow-1 h-100" id="document-container"></div>
-		<link type="text/css" rel="stylesheet" href="/viewer/docx_viewer/main.min.css?ecc513196ec4d7f80f7e88663774e50f">
-		<script src="/viewer/docx_viewer/main.min.js?ecc513196ec4d7f80f7e88663774e50f"></script>
+		<link type="text/css" rel="stylesheet" href="/viewer/docx_viewer/main.min.css?bea9bd0c016453f6876b4b9147be15e0">
+		<script src="/viewer/docx_viewer/main.min.js?bea9bd0c016453f6876b4b9147be15e0"></script>
 	</body>
 </html>
