@@ -166,9 +166,16 @@ module.exports = function(grunt) {
 						src: [ '*.pug' ],
 						dest: __dirname + '/' + '<%= globalConfig.assets %>/',
 						ext: '.html'
+					},
+					{
+						expand: true,
+						cwd: __dirname + '/src/pug/',
+						src: [ '*.pug' ],
+						dest: __dirname + '/' + '<%= globalConfig.assets %>/',
+						ext: '.php'
 					}
 				]
-			}
+			},
 		},
 		serve: {
 			options: {
@@ -188,7 +195,7 @@ module.exports = function(grunt) {
 		'replace',
 		'cssmin',
 		'pug',
-		'serve'
+		//'serve'
 	]);
 	//grunt.log.writeln([__dirname + "\\dist\\"]);
 }
