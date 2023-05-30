@@ -1,7 +1,4 @@
 !(function(){
-	if(typeof window.PTOP !== 'number') {
-		window.PTOP = window.top.innerHeight - 40;
-	}
 	let currentDocument = null,
 		file;
 	const params = window.location.search.replace('?','').split('&').reduce((p,e) =>{
@@ -70,13 +67,13 @@
 					}).catch((err) => {
 						container.classList.add('error-load');
 						//"document-container"
-						container.innerHTML = `Ошибка загрузки файла: ${file}`
+						container.innerHTML = ``;//`Ошибка загрузки файла: ${file}`
 					}); 
 				})
 				.catch((err) => {
 					console.log(err);
 					container.classList.add('error-load');
-					container.innerHTML = `Ошибка загрузки файла: ${file}`
+					container.innerHTML = ``;//`Ошибка загрузки файла: ${file}`
 				});
 		};
 	if(fl) {

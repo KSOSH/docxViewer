@@ -82,6 +82,9 @@ module.exports = function(grunt) {
 					'test/css/main.css' : [
 						//'bower_components/bootstrap/dist/css/bootstrap.css',
 						'src/less/main.less'
+					],
+					'test/css/test.css': [
+						'src/less/test.less'
 					]
 				}
 			}
@@ -97,6 +100,9 @@ module.exports = function(grunt) {
 				files: {
 					'test/css/prefix.main.css' : [
 						'test/css/main.css'
+					],
+					'test/css/prefix.test.css' : [
+						'test/css/test.css'
 					]
 				}
 			}
@@ -104,7 +110,8 @@ module.exports = function(grunt) {
 		group_css_media_queries: {
 			app: {
 				files: {
-					'test/css/media/main.css': ['test/css/prefix.main.css']
+					'test/css/media/main.css': ['test/css/prefix.main.css'],
+					'test/css/media/test.css': ['test/css/prefix.test.css']
 				}
 			}
 		},
@@ -131,6 +138,15 @@ module.exports = function(grunt) {
 						],
 						dest: 'test/css/replace/',
 						filter: 'isFile'
+					},
+					{
+						expand: true,
+						flatten : true,
+						src: [
+							'test/css/media/test.css'
+						],
+						dest: 'test/css/replace/',
+						filter: 'isFile'
 					}
 				]
 			}
@@ -142,7 +158,8 @@ module.exports = function(grunt) {
 			},
 			app: {
 				files: {
-					'<%= globalConfig.assets %>/main.min.css' : ['test/css/replace/main.css']
+					'<%= globalConfig.assets %>/main.min.css' : ['test/css/replace/main.css'],
+					'dist/main.min.css' : ['test/css/replace/test.css']
 				}
 			}
 		},
@@ -176,6 +193,35 @@ module.exports = function(grunt) {
 					}
 				]
 			},
+			test: {
+				options: {
+					doctype: 'html',
+					client: false,
+					pretty: '\t',
+					separator:  '\n',
+					data: function(dest, src) {
+						return {
+							"hash": uniqid()
+						}
+					}
+				},
+				files: [
+					{
+						expand: true,
+						cwd: __dirname + '/src/',
+						src: [ '*.pug' ],
+						dest: __dirname + '/dist/',
+						ext: '.html'
+					},
+					{
+						expand: true,
+						cwd: __dirname + '/src/',
+						src: [ '*.pug' ],
+						dest: __dirname + '/dist/',
+						ext: '.php'
+					}
+				]
+			}
 		},
 		serve: {
 			options: {

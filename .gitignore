@@ -7,3 +7,4 @@ index.html
 *.doc
 *.docx
 !dist/viewer/docx_viewer/index.html
+!dist/index.html

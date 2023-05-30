@@ -5,14 +5,17 @@
 		box-sizing: border-box;
 	}
 }
+
 html,
 body {
 	margin: 0;
 }
+
 body {
-	padding-top: 1em;
+	padding-top: 1.8em;
 	background-color: rgba(42, 42, 46, 1);
 }
+
 .docx {
 	table {
 		a {
@@ -20,6 +23,7 @@ body {
 		}
 	}
 }
+
 .title-bar {
 	position: fixed;
 	width: 100%;
@@ -62,6 +66,7 @@ body {
 		}
 	}
 }
+
 .docx-wrapper {
 	display: block;
 	padding: 0;
@@ -73,12 +78,23 @@ body {
 		margin-right: auto;
 	}
 }
+
 #document-container {
 	&.error-load {
 		min-height: ~'calc(100vh - 1em - 10px)';
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-image: data-uri("../docx.png");
+		height: ~'calc(100vh - 1em - 10px)';
+		position: relative;
+		padding-bottom: 1.8em;
+		&::before {
+			content: "";
+			display: block;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-image: data-uri("../docx.png");
+			background-size: contain;
+			height: 100%;
+		}
+
 		@media(max-width: 690px) {
 			background-size: contain;
 		}
