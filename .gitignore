@@ -3,5 +3,4 @@ node_modules
 index.html
 *.doc
 *.docx
-*-lock.json
 !dist/viewer/docx_viewer/index.html
