@@ -3,6 +3,7 @@ node_modules
 tests
 test
 index.html
+*.sublime-workspace
 *.doc
 *.docx
 !dist/viewer/docx_viewer/index.html
